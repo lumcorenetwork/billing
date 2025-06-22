@@ -1,0 +1,67 @@
+/* ...existing code... */
+:root {
+  --color-bg: #e3e6ff;
+  --color-bg-gradient: linear-gradient(135deg, #6a82fb 0%, #fc5c7d 100%);
+  --color-surface: #ffffffcc;
+  --color-text: #1a237e;
+  --color-primary: #6a82fb;
+  --color-secondary: #fc5c7d;
+  --color-accent: #a259f7;
+  --color-border: #bdbdfc;
+}
+
+[data-theme="dark"] {
+  --color-bg: #181a2a;
+  --color-bg-gradient: linear-gradient(135deg, #232526 0%, #6a82fb 100%);
+  --color-surface: #23243a;
+  --color-text: #e3e6ff;
+  --color-primary: #6a82fb;
+  --color-secondary: #fc5c7d;
+  --color-accent: #a259f7;
+  --color-border: #35355e;
+}
+
+body {
+  background: var(--color-bg-gradient);
+  color: var(--color-text);
+  transition: background 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+input, button, select, textarea {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+button {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.sidebar, .panel, .card {
+  background: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0 rgba(42, 42, 84, 0.08);
+  border: 1px solid var(--color-border);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 8px;
+}
+/* ...existing code... */
